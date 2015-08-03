@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'util/xbrow.scss';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans|Lobster&subset=latin,greek);
 
 // The universal Reset
@@ -15,11 +16,18 @@ $open-sans: 'Open Sans', sans-serif;
 $lobster: 'Lobster', cursive;
 
 #container {
-    display: flex;
-    background-image:url('intro.jpg'); 
+
+    // flex works for firefox and chrome to vertically align text to middle (with margin: auto in children)
+    @include flexbox();
+
+    background: image-url('intro.jpg') center center fixed no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+
+    // Works in firefox to make image size of page.
+    background-size: cover;
+
     height: 100%;
     width: 100%;
     font-family: $lobster, $open-sans;
@@ -30,11 +38,6 @@ $lobster: 'Lobster', cursive;
         text-align: center;
         color: #fff;
         margin: auto;
-
-/* Safari, Opera, and Chrome */
-display:-webkit-box;
--webkit-box-pack:center;
--webkit-box-align:center;
     }
 
 }
