@@ -1,0 +1,40 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Lobster&subset=latin,greek);
+
+// The universal Reset
+// Zeroes out all default browser margins and paddings.
+* {
+  padding:0;
+  margin:0;
+}
+
+$open-sans: 'Open Sans', sans-serif;
+$lobster: 'Lobster', cursive;
+
+#container {
+    display: flex;
+    background-image:url('intro.jpg'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    width: 100%;
+    font-family: $lobster, $open-sans;
+
+    h2 {
+        font-family: $lobster;
+        font-size: 200%;
+        text-align: center;
+        color: #fff;
+        margin: auto;
+
+/* Safari, Opera, and Chrome */
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+    }
+
+}
