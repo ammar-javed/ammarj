@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html>
+    <% content_for(:title, 'Welcome Home!') %>
+
+    <% content_for :head do %>
+
+      <% content_for :includes do %>
+        <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'home', media: 'all', 'data-turbolinks-track' => true %>
+      <% end %>
+
+    <% end %>
+
+    <body>
+
+        <section id='container'>
+            <h2>Welcome</h2>
+        </section>
+
+    </body>
+
+    <%= yield(:includes) %>
+
+</html>
