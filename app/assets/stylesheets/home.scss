@@ -37,15 +37,15 @@ $lobster: 'Lobster', cursive;
     font-family: $lobster, $open-sans;
 
     div {
+        @include flexbox();
         margin: auto;
+        height: 100%;
+        width: 100%;
     }
 
-    h2 {
-        font-family: $lobster;
-        font-size: ms(3);
-        text-align: center;
-        color: #fff;
+    #logo {
         margin: auto;
+        opacity: 1;
     }
 
 }
