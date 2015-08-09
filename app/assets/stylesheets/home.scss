@@ -15,12 +15,12 @@
 $open-sans: 'Open Sans', sans-serif;
 $lobster: 'Lobster', cursive;
 
-#container {
+#intro {
 
-    // flex works for firefox and chrome to vertically align text to middle (with margin: auto in children)
+    // flexbox mixin defined in util/xbrow.scss
     @include flexbox();
 
-    background: image-url('intro.jpg') center center fixed no-repeat;
+    background: image-url('landing.jpg') center center fixed no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,6 +32,10 @@ $lobster: 'Lobster', cursive;
     width: 100%;
     font-family: $lobster, $open-sans;
 
+    div {
+        margin: auto;
+    }
+
     h2 {
         font-family: $lobster;
         font-size: 200%;
@@ -40,4 +44,15 @@ $lobster: 'Lobster', cursive;
         margin: auto;
     }
 
+}
+
+#aboutme {
+
+    // flexbox mixin defined in util/xbrow.scss
+    @include flexbox();
+
+    background-color: #eb3ef4;
+    height: 100%;
+    width: 100%;
+    
 }
