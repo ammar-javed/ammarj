@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'util/xbrow.scss';
+@import '_modular-scale.scss';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans|Lobster&subset=latin,greek);
 
 // The universal Reset
@@ -11,6 +12,9 @@
   padding:0;
   margin:0;
 }
+
+$ms-base: 1em;
+$ms-ratio: 1.618;
 
 $open-sans: 'Open Sans', sans-serif;
 $lobster: 'Lobster', cursive;
@@ -38,7 +42,7 @@ $lobster: 'Lobster', cursive;
 
     h2 {
         font-family: $lobster;
-        font-size: 200%;
+        font-size: ms(3);
         text-align: center;
         color: #fff;
         margin: auto;
