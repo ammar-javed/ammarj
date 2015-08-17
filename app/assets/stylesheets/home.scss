@@ -19,44 +19,11 @@ $ms-ratio: 1.618;
 $open-sans: 'Open Sans', sans-serif;
 $lobster: 'Lobster', cursive;
 
-#intro {
-
-    // flexbox mixin defined in util/xbrow.scss
-    @include flexbox();
-
-    background: image-url('landing.jpg') center center fixed no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-
-    // Works in firefox to make image size of page.
-    background-size: cover;
-
-    height: 100%;
-    width: 100%;
-    font-family: $lobster, $open-sans;
-
-    div {
-        @include flexbox();
-        margin: auto;
-        height: 100%;
-        width: 100%;
-    }
-
-    #logo {
-        margin: auto;
-        opacity: 1;
-    }
-
+body {
+    background: image-url('landing.jpg');
 }
 
-#aboutme {
-
-    // flexbox mixin defined in util/xbrow.scss
-    @include flexbox();
-
-    background-color: #eb3ef4;
-    height: 100%;
-    width: 100%;
-    
+.top-bar {
+    display: none;
 }
+
