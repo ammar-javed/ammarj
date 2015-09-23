@@ -17,6 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "node-sass": "^3.3.3",
     "node-sass-middleware": "^0.9.6"
   },
   "repository": {
