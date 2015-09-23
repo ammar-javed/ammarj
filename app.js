@@ -22,9 +22,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Compile from main /Sass folder
 app.use(
    sass({
-       src: __dirname + '/sass', 
+       src: __dirname + '/sass/unsemantic',
+       dest: __dirname + '/public/stylesheets',
+       prefix:  '/stylesheets',
+       debug: true,       
+   })
+); 
+
+//Compile from unsemantic folder
+app.use(
+   sass({
+       src: __dirname + '/sass',
        dest: __dirname + '/public/stylesheets',
        prefix:  '/stylesheets',
        debug: true,       
