@@ -18,12 +18,8 @@ body {
 
 div {
 
-	#top {
-		height: 20%;
-	}
-
-	#name-container {
-		height: 60%;
+	#content-container {
+		height: 100%;
     }
 
     #name {
@@ -46,9 +42,15 @@ div {
 		}
 
 		td {
-    	vertical-align: middle;
+    		vertical-align: middle;
         }
     }
 
-    
+    #top #bottom {
+
+    	#spacer {
+    		height: 50%;
+    	}
+
+    }
 }
