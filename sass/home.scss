@@ -1,9 +1,10 @@
 @import 'modular-scale';
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300|Open+Sans);
+@import 'colors';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300|Open+Sans:100,300,400);
 
 $ms-base: 1em;
 $ms-ratio: $golden;
-$name-border-color: #D54000;
+
 
 $roboto: 'Roboto', sans-serif;
 $opensans: 'Open Sans', sans-serif;
@@ -15,6 +16,31 @@ body {
   background-repeat: no-repeat;
 }
 
+#button {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    color: $white;
+    display: block;
+
+    font-size: 15pt;
+    font-family: $opensans;
+    font-weight: 100;
+
+    width: 50%;
+
+    padding: 10px 5px 10px 5px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.button-top {
+    margin-bottom: 50px;
+}
+
+.button-bottom {
+    margin-top: 50px;
+}
 
 div {
 
@@ -25,7 +51,6 @@ div {
 
     #name {
     	width: 100%;
-    	background-color: white;
 		background-color: rgba(255,255,255,0.4);
 
 		border-top: medium solid $name-border-color;
