@@ -3,12 +3,28 @@ html
     title AJ | Welcome
     link(rel='stylesheet', href='stylesheets/home.css')
     link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
 
   body
     block content
-      #top.row 
 
-      #middle.row
-        #name.column
+      .grid-container
+        table#top.grid-100
+          td.grid-25
+            h1 Button 1
+          td.grid-25
+            h1 Button 2
 
-      #bottom.row
+        #middle.grid-50.prefix-30
+          table#name-container
+            td
+              #name
+                h1 AMMAR JAVED
+
+        #bottom.grid-100
+          .grid-40
+            h1 Button 3
+            h1 Button 4
+
+
+
