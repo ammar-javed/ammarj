@@ -1,9 +1,12 @@
 @import 'modular-scale';
 @import 'colors';
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300|Open+Sans:100,300,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
 
 $ms-base: 1em;
 $ms-ratio: $golden;
+
+// Default from _unsemantic-grid-responsive-tablet.scss
+$media-desktop-min: 1025px !default;
 
 
 $roboto: 'Roboto', sans-serif;
@@ -23,7 +26,7 @@ body {
     display: block;
 
     font-size: 15pt;
-    font-family: $opensans;
+    font-family: $roboto;
     font-weight: 100;
 
     width: 50%;
@@ -40,6 +43,13 @@ body {
 
 .button-bottom {
     margin-top: 50px;
+}
+
+@media screen and (min-width: $media-desktop-min) {
+    .about {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 }
 
 div {
