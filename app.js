@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var sass = require('node-sass-middleware');
 var path = require('path');
 
-var routes = require('./routes/home');
+var routes = require('./routes/main');
 
 var app = express();
 
