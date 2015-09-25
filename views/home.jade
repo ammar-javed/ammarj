@@ -7,35 +7,39 @@ html
 
   body
     block content
+      #main
+        .grid-container
+          .grid-100
+            table#content-container
 
-      .grid-container
-        .grid-100
-          table#content-container
+              td
+                .grid-20.prefix-35
+                  a(href='/about')#button.button-top.about ABOUT
 
-            td
-              .grid-20.prefix-35
-                a(href='#')#button.button-top.about ABOUT
+                .grid-25
+                  a(href='#')#button.button-top.contact CONTACT
 
-              .grid-25
-                a(href='#')#button.button-top.contact CONTACT
+                // Breaking up row
+                span.clear
 
-              // Breaking up row
-              span.clear
+                table.prefix-30
+                  td
+                    #name
+                      h1 AMMAR JAVED
 
-              table.prefix-30
-                td
-                  #name
-                    h1 AMMAR JAVED
+                //Breaking up row
+                span.clear
 
-              //Breaking up row
-              span.clear
+                .grid-25.prefix-20
+                   a(href='#')#button.button-bottom PROJECTS
+                .grid-25
+                   a(href='#')#button.button-bottom EXPERIENCE
+                .grid-25 
+                   a(href='#')#button.button-bottom BLOG
 
-              .grid-25.prefix-20
-                 a(href='#')#button.button-bottom PROJECTS
-              .grid-25
-                 a(href='#')#button.button-bottom EXPERIENCE
-              .grid-25 
-                 a(href='#')#button.button-bottom BLOG
+    link(rel='javascript',src="lib/jquery-2.1.4.min.js")
+    link(rel='javascript', src="lib/jquery.smoothState.min.js")
+    link(rel='javascript', src='js/home.js')
 
 
 

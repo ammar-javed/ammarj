@@ -1,0 +1,23 @@
+@import 'modular-scale';
+@import 'colors';
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+$ms-base: 1em;
+$ms-ratio: $golden;
+
+// Default from _unsemantic-grid-responsive-tablet.scss
+$media-mobile-max: 767px !default;
+$media-tablet-min: 768px !default;
+$media-tablet-max: 1024px !default;
+$media-desktop-min: 1025px !default;
+
+
+$roboto: 'Roboto', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+
+body {
+  background: url('/static/landing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
