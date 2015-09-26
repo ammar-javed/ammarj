@@ -1,14 +1,17 @@
 html
   head
-    title AJ | About Me
-    link(rel='stylesheet', href='stylesheets/about.css')
-    link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
-    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
 
   body
     #main
+      title AJ | About Me
+      link(rel='stylesheet', href='stylesheets/about.css')
+      link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
+
       nav.top-bar(data-topbar, role='navigation')
-        // Will reactivate when making the site mobile friendly
+        ul.title-area
+          li.name
+            a(href='/') AMMAR JAVED
         section.top-bar-section
           ul.right
             li.active.about
@@ -26,9 +29,11 @@ html
 
 
 
-    link(rel='javascript',src="lib/jquery-2.1.4.min.js")
-    link(rel='javascript', src="lib/jquery.smoothState.min.js")
-    link(rel='javascript', src='js/about.js')
+    script(rel='javascript',src="lib/jquery-2.1.4.min.js")
+    script(rel='javascript', src="lib/jquery.smoothState.min.js")
+    script(rel='javascript', src='lib/vendor/modernizr.js')
+    script(rel='javascript', src='lib/foundation.min.js')
+    script(rel='javascript', src='js/about.js')
 
 //-   <section class="top-bar-section">
 //-     <!-- Right Nav Section -->

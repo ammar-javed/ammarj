@@ -1,13 +1,14 @@
 html
   head
-    title AJ | Welcome
-    link(rel='stylesheet', href='stylesheets/home.css')
-    link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
-    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
 
   body
     block content
       #main
+        title AJ | Welcome
+        link(rel='stylesheet', href='stylesheets/home.css')
+        link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
+
         .grid-container
           .grid-100
             table#content-container
@@ -44,9 +45,9 @@ html
                 .grid-25 
                    a(href='#')#button.button-bottom BLOG
 
-    link(rel='javascript',src="lib/jquery-2.1.4.min.js")
-    link(rel='javascript', src="lib/jquery.smoothState.min.js")
-    link(rel='javascript', src='js/home.js')
+    script(rel='javascript',src="lib/jquery-2.1.4.min.js")
+    script(rel='javascript', src="lib/jquery.smoothState.min.js")
+    script(rel='javascript', src='js/home.js')
 
 
 
