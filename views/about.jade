@@ -7,22 +7,44 @@ html
       link(rel='stylesheet', href='stylesheets/about.css')
       link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
 
-      nav.top-bar(data-topbar, role='navigation')
-        ul.title-area
-          li.name
-            a(href='/') AMMAR JAVED
-        section.top-bar-section
-          ul.right
-            li.active.about
-              a(href='/about') About Me
-            li.projects
-              a(href='#') Projects
-            li.exp
-              a(href='#') Professional Experience
-            li.blog
-              a(href='#') Blog
-            li.contact
-              a(href='#') Contact
+      label(for='show-menu').show-menu Show Menu
+      input(type='checkbox', role='button')#show-menu
+      ul.menu
+        li.name
+          a(href='/') AMMAR JAVED
+        li.about
+          a(href='/about') About Me
+        li.projects
+          a(href='#') Projects
+        li.exp
+          a(href='#') Experience
+        li.blog
+          a(href='#') Blog
+        li.contact
+          a(href='#') Contact
+
+      //- nav.top-bar(data-topbar, role='navigation')
+      //-   ul.title-area
+      //-     li.name
+      //-       a(href='/') AMMAR JAVED
+      //-       a(href="https://twitter.com/ammarj965")#socbutton
+      //-         img(src="static/twitter.png", alt="Follow me on Twitter!")#socbuttonimg
+      //-       a(href="https://www.linkedin.com/in/ammarjav")#socbutton
+      //-         img(src="static/linkedin.png", alt="Connect with me on Linkedin!")#socbuttonimg
+      //-       a(href="https://www.facebook.com/ammar.javed.3998")#socbutton
+      //-         img(src="static/facebook.png", alt="Message me on facebook to talk!")#socbuttonimg
+      //-   section.top-bar-section
+      //-     ul.right
+      //-       li.active.about
+      //-         a(href='/about') About Me
+      //-       li.projects
+      //-         a(href='#') Projects
+      //-       li.exp
+      //-         a(href='#') Professional Experience
+      //-       li.blog
+      //-         a(href='#') Blog
+      //-       li.contact
+      //-         a(href='#') Contact
 
 
 
