@@ -47,7 +47,7 @@ li {
 /*Style for menu links*/
 li a {
     display:block;
-    min-width:140px;
+    min-width:130px;
     height: 50px;
     text-align: center;
     line-height: 50px;
@@ -56,10 +56,18 @@ li a {
     background: none;
     text-decoration: none;
     margin: auto;
+    font-family: $roboto;
 }
 
 .name {
-    
+    border-right: thin solid $name-border-color;
+}
+
+.name a {
+    font-size: ms(2);
+    padding-left: 30px;
+    padding-right: 30px;
+    color: $white;
 }
 
 .name:hover a {
@@ -131,7 +139,7 @@ input[type=checkbox]:checked ~ #menu{
 
 /*Responsive Styles*/
 
-@media screen and (max-width : 760px){
+@media screen and (max-width : $media-tablet-max){
     /*Make dropdown links appear inline*/
     ul {
         position: static;
