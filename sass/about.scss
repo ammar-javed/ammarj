@@ -1,64 +1,76 @@
 @import 'reset';
-@import 'navbar';
 @import 'modular-scale';
 @import 'colors';
+@import 'mbreaks';
+@import 'navbar';
 
 $ms-base: 1em;
 $ms-ratio: $golden;
 
-// Default from _unsemantic-grid-responsive-tablet.scss
-$media-mobile-max: 767px !default;
-$media-tablet-min: 768px !default;
-$media-tablet-max: 1024px !default;
-$media-desktop-min: 1025px !default;
+body {
+  background: url('/static/landing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-// body {
-//   background: url('/static/landing.jpg');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   min-height: 100%;
-// }
-
-/* CSS */
-.s1container {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    height: 100%;
+.contentcontainer {
+    margin: 100px 5% 100px 5%;
+    border-radius:20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 20px;
+    min-width: 85%;
     overflow: hidden;
-    position: relative;
-    opacity: 1;
-}
-.s1content {
-    max-width: 450px;
-    margin: 0 auto 0 auto;
-    display: table-cell;
-    vertical-align: middle;
-    color: #ebebeb;
-    padding: 0 8%;
-    text-align: center;
 
+    .quote {
+        font-size: ms(2);
+        font-family: $opensans;
+        color: $name-border-color;
+        line-height: 120%;
+        font-style: italic;
+        padding-left: 20px;
+    }
 
+    .quoter {
+        color: $white;
+        line-height: 120%;
+        font-style: italic;
+        padding-left: 20px;
+    }
+
+    p {
+        color: $white;
+        padding: 20px;
+        line-height: 120%;
+        font-family: $opensans;
+        font-weight: 100;
+        line-height: 120%;
+        letter-spacing: 1px;
+    }
 }
 
-.s1content h1 {
-    font-size: ms(2);
-    font-family: $opensans;
-    font-weight: 400;
-    max-width: 40%;
-    color: #fff;
-    margin: auto auto 100px auto;
+.me {
+    border-radius: 5px;
+    height: 50%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
 
-.bcg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-/* Slide 1 */
-#splash .bcg {
-    background-image: url('/static/landing.jpg');
+@media screen and (max-width: $media-tablet-min) {
+    .contentcontainer {
+        margin: 100px 5% 100px 5%;
+        border-radius:20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: inline-block;
+        padding: 20px;
+        min-width: 80%;
+    }
+
+    .me {
+        border-radius: 5px;
+        height: 50%;
+        float: left;
+        margin-bottom: 20px;
+    }    
 }
