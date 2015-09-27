@@ -1,16 +1,27 @@
 html
   head
+    script(rel='javascript', src="lib/jquery-2.1.4.min.js")
 
   body
     #main
       title AJ | Projects
       link(rel='stylesheet', href='stylesheets/projects.css')
+      link(rel='stylesheet', href='lib/flexslider/flexslider.css')
       link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
 
+      //Navbar
       include nav/navbar.jade
+
+      // Content
+      .contentcontainer.grid-33.mobile-grid-75.push-10
+        h1 Korean BBQ Table
+
+
 
       // Footer
       include footer/footer.jade
+
+      script(rel='javascript', src='lib/flexslider/jquery.flexslider-min.js')
 
 
     script(rel='javascript', src="lib/jquery-2.1.4.min.js")

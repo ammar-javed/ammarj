@@ -7,7 +7,7 @@
 /* Menu! */
 
 /*Strip the ul of padding and list styling*/
-ul {
+.navbar {
     list-style-type:none;
     margin:0;
     padding:0;
@@ -58,7 +58,7 @@ ul {
 
 /*Hover state for top level links*/
 li:hover a {
-    background: #19c589;
+    background: $limegreen;
 }
 
 // /*Style for dropdown links*/
