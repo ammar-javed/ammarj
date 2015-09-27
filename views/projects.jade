@@ -1,6 +1,6 @@
 html
   head
-    script(rel='javascript', src="lib/jquery-2.1.4.min.js")
+    script(type='text/javascript', src="lib/jquery-2.1.4.min.js")
 
   body
     #main
@@ -15,15 +15,27 @@ html
       // Content
       .contentcontainer.grid-33.mobile-grid-75.push-10
         h1 Korean BBQ Table
+        .flexslider
+          ul.slides
+            li
+              img(src="/static/kbbq/kbbq5.jpg")
+            li
+              img(src="/static/kbbq/kbbq1.jpg")
+            li
+              img(src="/static/kbbq/kbbq2.jpg")
+            li
+              img(src="/static/kbbq/kbbq3.jpg")
+            li
+              img(src="/static/kbbq/kbbq4.jpg")
 
 
 
       // Footer
       include footer/footer.jade
 
-      script(rel='javascript', src='lib/flexslider/jquery.flexslider-min.js')
+      script(type='text/javascript', src='lib/flexslider/jquery.flexslider-min.js')
+      script(type='text/javascript', src='js/projects.js')
 
 
-    script(rel='javascript', src="lib/jquery-2.1.4.min.js")
     script(rel='javascript', src="lib/jquery.smoothState.min.js")
     script(rel='javascript', src='js/main.js')
