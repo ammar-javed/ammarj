@@ -67,7 +67,7 @@ body {
         border-radius:20px;
         background-color: rgba(0, 0, 0, 0.3);
         display: inline-block;
-        padding: 20px;
+        padding: 20px 10px 20px 20px;
         min-width: 80%;
     }
 
@@ -76,5 +76,16 @@ body {
         height: 50%;
         float: left;
         margin-bottom: 20px;
-    }    
+        margin-right: 10px;
+    } 
+
+    .quote {
+        text-align: center;
+        padding-right: 10px;
+    }  
+
+    .quoter {
+        text-align: right;
+        padding-right: 10px;
+    } 
 }
