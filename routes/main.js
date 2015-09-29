@@ -16,4 +16,9 @@ router.get('/projects', function(req, res, next) {
     res.render('projects'); 
 });
 
+/* GET Experiences page. */
+router.get('/exp', function(req, res, next) {
+    res.render('experiences'); 
+});
+
 module.exports = router;
