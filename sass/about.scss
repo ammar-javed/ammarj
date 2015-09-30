@@ -8,24 +8,24 @@ $ms-base: 1em;
 $ms-ratio: $golden;
 
 body {
-  background: url('/static/landing.jpg');
+  background: url('/static/about.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .contentcontainer {
-    margin: 100px 5% 100px 5%;
+    margin: 100px 10% 100px 10%;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.3);
     display: inline-block;
     padding: 20px;
-    min-width: 85%;
+    min-width: 80%;
     overflow: hidden;
 
     .quote {
         font-size: ms(2);
         font-family: $opensans;
-        color: $name-border-color;
+        color: $limegreen;
         line-height: 120%;
         font-style: italic;
         padding-left: 20px;
@@ -40,11 +40,10 @@ body {
 
     p {
         color: $white;
-        padding: 20px;
+        padding: 10px 20px;
         line-height: 120%;
         font-family: $opensans;
         font-weight: 100;
-        line-height: 120%;
         letter-spacing: 1px;
     }
 
@@ -54,7 +53,7 @@ body {
 }
 
 .me {
-    border-radius: 5px;
+    border-radius: 20px;
     height: 50%;
     float: left;
     margin-right: 30px;
