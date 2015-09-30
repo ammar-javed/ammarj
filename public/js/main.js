@@ -59,6 +59,16 @@ $(
                   src: '/static/kbbq/kbbq4.jpg',
                   w: 532,
                   h: 946
+              },
+              {
+                  src: '/static/kbbq/kbbq6.jpg',
+                  w: 532,
+                  h: 946
+              },
+              {
+                  src: '/static/kbbq/kbbq7.jpg',
+                  w: 532,
+                  h: 946
               }
           ];
 
