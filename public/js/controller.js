@@ -56,7 +56,7 @@ $(
 
     $(".bbq-gal").on("click", "a", function (e) {
 
-        console.log(e);
+        console.log( $(this).attr("itemprop") );
         $(".modal").show();
     });
 
