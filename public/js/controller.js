@@ -32,7 +32,9 @@ $(
 
       if ($('.projects').length) {
 
-        $(".bbq-gal").on("click", "a", function(e) {
+        $(".bbq-gal").on("click", "a", function (e) {
+
+            console.log(e);
             $(".modal").show();
         });
 
@@ -50,15 +52,22 @@ $(
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 
-  if ($('.gallery').length) {
+  if ($('.projects').length) {
 
-    $(".bbq-gal").on("click", "a", function(e) {
+    $(".bbq-gal").on("click", "a", function (e) {
+
+        console.log(e);
         $(".modal").show();
     });
 
-    $(".modal").click(function(e) {
-      $(".modal").hide();
+    $(document).mouseup( function (e) {
+      var img = $("p");
+
+      if (!img.is(e.target) && img.has(e.target).length === 0) {
+        $(".modal").hide();
+      }
     });
+
   }
 
 }
