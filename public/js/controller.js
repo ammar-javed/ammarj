@@ -32,41 +32,12 @@ $(
 
       if ($('.projects').length) {
 
-        $(".bbq-gal").on("click", "a", function (e) {
-
-            console.log(e);
-            $(".modal").show();
-        });
-
-        $(document).mouseup( function (e) {
-          var img = $("p");
-
-          if (!img.is(e.target) && img.has(e.target).length === 0) {
-            $(".modal").hide();
-          }
-        });
 
       }
 
     }
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
-
-  if ($('.projects').length) {
-
-    $(".bbq-gal").on("click", "a", function (e) {
-
-        console.log( $(this).attr("itemprop") );
-        $(".modal").show();
-    });
-
-    $(document).mouseup( function (e) {
-      var img = $("p");
-
-      if (!img.is(e.target) && img.has(e.target).length === 0) {
-        $(".modal").hide();
-      }
-    });
 
   }
 

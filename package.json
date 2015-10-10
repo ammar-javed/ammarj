@@ -18,8 +18,7 @@
   },
   "devDependencies": {
     "node-sass": "^3.3.3",
-    "node-sass-middleware": "^0.9.6",
-    "photoswipe": "^4.1.0"
+    "node-sass-middleware": "^0.9.6"
   },
   "repository": {
     "type": "git",
