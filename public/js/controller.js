@@ -32,6 +32,7 @@ $(
 
       if ($('.projects').length) {
 
+        $("#lightgallery").lightGallery();
 
       }
 
@@ -39,7 +40,9 @@ $(
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 
-  }
+  $("#lightgallery").lightGallery({
+    mode: 'lg-fade',
+  });
 
-}
+  }
 );

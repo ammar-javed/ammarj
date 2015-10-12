@@ -26,6 +26,18 @@ html
             .mask
               span
 
+          div#lightgallery
+            a(href='/static/bbq/bbq1.jpg')
+              img(src='/static/bbq/thumb/bbq1_thumb.jpg')
+            a(href='/static/bbq/bbq2.jpg')
+              img(src='/static/bbq/thumb/bbq2_thumb.jpg')
+            a(href='/static/bbq/bbq3.jpg')
+              img(src='/static/bbq/thumb/bbq3_thumb.jpg')
+            a(href='/static/bbq/bbq4.jpg')
+              img(src='/static/bbq/thumb/bbq4_thumb.jpg')
+            a(href='/static/bbq/bbq5.jpg')
+              img(src='/static/bbq/thumb/bbq5_thumb.jpg')
+
 
           p.desc.
             My brother's and my first step into the world of saws, power drills and sanders to build this Korean style BBQ table, with a 22' Webber charcoal grill in the center! Look out for my blog post on how to DIY soon!
@@ -34,6 +46,8 @@ html
 
       // Footer
       include footer/footer.jade
+
+      script(rel='javascript', src='lib/lg/lightgallery.min.js')
 
 
     script(rel='javascript', src="lib/jquery.smoothState.min.js")
