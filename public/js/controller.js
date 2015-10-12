@@ -32,7 +32,10 @@ $(
 
       if ($('.projects').length) {
 
-        $("#lightgallery").lightGallery();
+        $("#lightgallery").lightGallery({
+          mode: 'lg-fade',
+          addClass: 'fixed-size'
+        });
 
       }
 
@@ -42,6 +45,7 @@ $(
 
   $("#lightgallery").lightGallery({
     mode: 'lg-fade',
+    addClass: 'fixed-size'
   });
 
   }

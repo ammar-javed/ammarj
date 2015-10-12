@@ -45,7 +45,8 @@ app.use(
 app.use(express.static( path.join( __dirname, 'public' ) ) );
 
 app.use('/', routes);
-app.use('/static', express.static('img'));
+app.use('/img', express.static('img'));
+app.use('/fonts', express.static('fonts'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

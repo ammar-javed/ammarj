@@ -9,7 +9,7 @@ $ms-base: 1em;
 $ms-ratio: $golden;
 
 body {
-  background: url('/static/projects.jpg');
+  background: url('/img/projects.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -104,6 +104,32 @@ body {
     font-style:normal;
     color:#999;
   }
+}
+
+.lg-backdrop.in {
+    opacity: 0.80;
+}
+
+.fixed-size.lg-outer .lg-inner {
+  padding: 40px 0 40px 0;
+}
+
+.fixed-size.lg-outer .lg-sub-html {
+  position: absolute;
+  text-align: left;
+}
+
+.fixed-size.lg-outer .lg-toolbar {
+  background-color: transparent;
+  height: 0;
+}
+
+.fixed-size.lg-outer .lg-toolbar .lg-icon {
+  padding-top: 40px;
+}
+
+.fixed-size.lg-outer .lg-img-wrap {
+  padding: 12px;
 }
 
 @media screen and (max-width: $media-tablet-min) {
