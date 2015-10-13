@@ -48,5 +48,12 @@ $(
     addClass: 'fixed-size'
   });
 
+  $('.gal-grid').isotope({
+    itemSelector: '.gal-item',
+    masonry: {
+      columnWidth: 50
+    }
+  });
+
   }
 );

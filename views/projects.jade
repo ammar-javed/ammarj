@@ -26,17 +26,18 @@ html
             .mask
               span
 
-          div#lightgallery
-            a(href='/img/bbq/bbq1.jpg')
-              img(src='/img/bbq/thumb/bbq1_thumb.jpg')
-            a(href='/img/bbq/bbq2.jpg')
-              img(src='/img/bbq/thumb/bbq2_thumb.jpg')
-            a(href='/img/bbq/bbq3.jpg')
-              img(src='/img/bbq/thumb/bbq3_thumb.jpg')
-            a(href='/img/bbq/bbq4.jpg')
-              img(src='/img/bbq/thumb/bbq4_thumb.jpg')
-            a(href='/img/bbq/bbq5.jpg')
+          .gal-grid#lightgallery
+            a(href='/img/bbq/bbq5.jpg').gal-item
               img(src='/img/bbq/thumb/bbq5_thumb.jpg')
+            a(href='/img/bbq/bbq1.jpg').gal-item
+              img(src='/img/bbq/thumb/bbq1_thumb.jpg')
+            a(href='/img/bbq/bbq4.jpg').gal-item
+              img(src='/img/bbq/thumb/bbq4_thumb.jpg')
+            a(href='/img/bbq/bbq2.jpg').gal-item
+              img(src='/img/bbq/thumb/bbq2_thumb.jpg')
+            a(href='/img/bbq/bbq3.jpg').gal-item
+              img(src='/img/bbq/thumb/bbq3_thumb.jpg')
+
 
 
           p.desc.
@@ -48,6 +49,8 @@ html
       include footer/footer.jade
 
       script(rel='javascript', src='lib/lg/lightgallery.min.js')
+      script(rel='javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js')
+
 
 
     script(rel='javascript', src="lib/jquery.smoothState.min.js")
