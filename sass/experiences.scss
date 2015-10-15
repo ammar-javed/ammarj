@@ -8,7 +8,7 @@ $ms-base: 1em;
 $ms-ratio: $golden;
 
 body {
-  background: url('/img/exp.jpg');
+  background: url('/img/exp.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -16,7 +16,7 @@ body {
 .xp {
     margin: 100px auto;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
     display: inline-block;
     padding: 20px 0 20px 0;
     overflow: hidden;
@@ -34,14 +34,15 @@ body {
 
     .logo {
         display: block;
-        margin: auto;
+        margin: 10px auto 10px auto;
         max-width: 150px;
+        max-height: 100px;
     }
 
     .desc {
         color: $black;
-        padding: 5px 0 0 0px;
-        text-align: center;
+        padding: 5px 15px 0 20px;
+        text-align: left;
         line-height: 120%;
         font-family: $roboto;
         font-weight: 400;
@@ -49,13 +50,13 @@ body {
     }
 
     .info {
-        margin: 10px 0 0 0;
+        margin: 20px 0 0 0;
         font-family: $roboto;
         font-size: 10pt;
         font-weight: 400;
         color: rgba(142, 107, 95, 1);
 
-        .company {
+        .capacity {
             text-align: center;
         }
 
