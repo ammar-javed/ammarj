@@ -7,7 +7,7 @@ $ms-base: 1em;
 $ms-ratio: $golden;
 
 body {
-  background: url('/img/landing.jpg');
+  background: url('/img/landing.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -55,7 +55,7 @@ div {
 
     #name {
     	width: 100%;
-		background-color: rgba(255,255,255,0.4);
+		background-color: rgba(255,255,255,0.75);
 
 		border-top: medium solid $name-border-color;
 		border-bottom: medium solid $name-border-color;
@@ -91,7 +91,7 @@ div {
     #socbuttonimg {
         width: 40px;
         height: 40px;
-        opacity: 0.5;
+        opacity: 1;
         padding-left: 12px;
     }
 }
