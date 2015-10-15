@@ -139,19 +139,3 @@ body {
 .fixed-size.lg-outer .lg-img-wrap {
   padding: 12px;
 }
-
-@media screen and (max-width: $media-tablet-min) {
-    .kbbq {
-        margin: 75px auto;
-        border-radius: 5px;
-        display: inline-block;
-        overflow: hidden;
-        background-color: rgba(255, 255, 255, 0.4);
-        padding: 20px 0 20px 0;
-        overflow: hidden;
-        -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-}

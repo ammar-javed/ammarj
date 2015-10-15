@@ -32,6 +32,12 @@ body {
         color: rgba(50, 82, 117, 1);
     }
 
+    .logo {
+        display: block;
+        margin: auto;
+        max-width: 150px;
+    }
+
     .desc {
         color: $black;
         padding: 5px 0 0 0px;
