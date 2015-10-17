@@ -45,7 +45,7 @@ $(
     },
     onAfter: function ($container, $newContent) {
 
-      if ($('.projectsCont').length) {
+      if ($('#projectsCont').length) {
 
         $("#lightgallery").lightGallery({
           mode: 'lg-fade',
@@ -60,7 +60,7 @@ $(
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 
-  if ($('.projectsCont').length) {
+  if ($('#projectsCont').length) {
 
     $("#lightgallery").lightGallery({
       mode: 'lg-fade',

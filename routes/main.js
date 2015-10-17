@@ -21,4 +21,9 @@ router.get('/exp', function(req, res, next) {
     res.render('experiences'); 
 });
 
+/* GET Contact page. */
+router.get('/contact', function(req, res, next) {
+    res.render('contact'); 
+});
+
 module.exports = router;

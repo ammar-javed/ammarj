@@ -1,0 +1,14 @@
+@import 'reset';
+@import 'modular-scale';
+@import 'colors';
+@import 'mbreaks';
+@import 'navbar';
+
+$ms-base: 1em;
+$ms-ratio: $golden;
+
+body {
+  background: url('/img/exp.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
