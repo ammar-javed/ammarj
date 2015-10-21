@@ -3,7 +3,8 @@
 @import 'mbreaks';
 @import 'fonts';
 
-
+$button-transition-dur: 0.3s;
+$border-bottom-dur: 0.3;
 /* Menu! */
 
 /*Strip the ul of padding and list styling*/
@@ -36,6 +37,7 @@
         line-height: 50px;
         color: #fff;
         background: none;
+        transition: background $button-transition-dur;
         text-decoration: none;
         margin: auto;
     }
@@ -52,13 +54,14 @@
     color: $white;
 }
 
-.name:hover a {
+.name:hover {
     background: none;
 }
 
 /*Hover state for top level links*/
 .nav:hover a {
     background: $limegreen;
+    transition: background $button-transition-dur;
 }
 
 // /*Style for dropdown links*/
