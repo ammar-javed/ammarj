@@ -6,6 +6,7 @@ html
     #main
       #contact
         title AJ | Experience
+        //link(rel='stylesheet', href='/lib/foundation/css/foundation.min.css')
         link(rel='stylesheet', href='stylesheets/contact.css')
         link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
 
@@ -13,9 +14,36 @@ html
         include nav/navbar.jade
 
         // Content
+        .content.grid-50.mobile-grid-50.tablet-grid-50.push-25.mobile-push-25.tablet-push-25
+
+          h1 EMAIL
+
+          form(action='/contact', name='contactus', id='contactus', method='post')
+            fieldset
+              
+              label(for='name') Name
+              input(name='name', type='text', value='', placeholder='Aubrey Graham', id='name')
+
+              
+              label(for='email') Email
+              input(name='email', type='text', value='', placeholder='ammar@javed.com' id='email')
+
+
+              label(for='subject') Subject
+              input(name='subject', type='text', value='', placeholder="Let's chill!", id='subject')
+
+              
+              label(for='message') Message
+              textarea(name='message', cols='40', rows='10', id='message')
+
+
+              label
+              input(name='submit', type='submit', value='Send', id='submit')
 
         // Footer
         include footer/footer.jade
+
+        //script(rel='javascript', src="/lib/foundation/js/foundation.min.js")
 
 
     script(rel='javascript', src="lib/jquery.smoothState.min.js")

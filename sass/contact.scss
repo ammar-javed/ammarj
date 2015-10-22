@@ -12,3 +12,56 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.content {
+    margin: 75px auto 0px auto;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 20px 0 20px 0;
+    overflow: hidden;
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    label{
+        margin: 10px 0 10px 0;
+        font-family: $roboto;
+        font-weight: 300;
+        display: block;
+    }
+
+    h1 {
+        font-size: ms(2);
+        font-family: $roboto;
+        font-weight: 100;
+        text-align: center;
+        color: rgba(50, 82, 117, 1);
+    }
+
+    h3 {
+        font-family: $opensans;
+        font-weight: 100;
+        text-align: center;
+        color: rgba(50, 82, 117, 1);
+        margin-top: 5px;
+    }
+
+    textarea, input[type="text"] {
+        margin-left: 10px;
+        padding: 10px;
+        width: 90%;
+        border: none;
+        border-bottom: solid 2px #c9c9c9;
+        transition: border 0.2s;
+    }
+
+    textarea:focus, input[type="text"]:focus {
+        outline: none;
+        border-bottom: solid 2px $name-border-color;
+    }
+
+    textarea {
+        width: 90%;
+    }
+}
