@@ -19,9 +19,10 @@ $(
 
   var options = {
     anchors: 'a',
-    prefetch: false,
-    cacheLength: 2,
+    prefetch: true,
+    cacheLength: 0,
     debug: true,
+    blacklist: 'form',
     onStart: {
       duration: 250, // Duration of our animation
       render: function ($container) {

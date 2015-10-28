@@ -19,5 +19,8 @@
 # Ignore node_module folder; use npm install and package.json to install appropriate dependencies
 /node_modules
 
+# Ignore config file which will have passwords and keys
+config.js
+
 # Ignore processed .css files; will be rebuit anyways
 /public/stylesheets
