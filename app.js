@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var sass = require('node-sass-middleware');
 var path = require('path');
 var nodemailer = require('nodemailer');
+var validator = require('validator');
 
 var routes = require('./routes/main');
 
@@ -53,6 +54,44 @@ app.use('/fonts', express.static('fonts'));
 // POST endpoint for contact form
 app.post('/contact', function (req, res) {
 
+  var email = req.body.email;
+  var name = req.body.name;
+  var message = req.body.message;
+  var subject = req.body.subject;
+  var retDict = {};
+  var formErr = false;
+
+  //Validations
+  if ( !validator.isEmail(email) ) {
+    retDict["emailErr"] = "The email address doesn't seem right!";
+    formErr = true;
+  }
+
+  if ( validator.equals( validator.trim(name), "" ) ) {
+    retDict["nameErr"] = "What is your name?";
+    formErr = true;
+  } else {
+    console.log("Name wasn't blank");
+  }
+
+  if ( validator.equals( validator.trim(subject), "" ) ) {
+    retDict["subjectErr"] = "Give me a a hint! [Subject]";
+    formErr = true;
+  }
+
+  if ( validator.equals( validator.trim(message), "") ) {
+    retDict["messageErr"] = "Please say something!";
+    formErr = true;
+  }
+
+  console.log(retDict);
+
+  if ( formErr ) {
+    retDict["formErr"] = true;
+    res.end(res.render('contact', retDict));
+    return;
+  }
+
   var mailOpts, smtpTrans;
   //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
   smtpTrans = nodemailer.createTransport('SMTP', {
@@ -64,21 +103,23 @@ app.post('/contact', function (req, res) {
   });
   //Mail options
   mailOpts = {
-      from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
+      from: name + ' &lt;' + email + '&gt;', //grab form data from the request body object
       to: config.defaults.contact_send_to_email,
-      subject: '[Contact Form] ' + req.body.subject,
-      text: req.body.message
+      subject: '[Contact Form] ' + subject,
+      text: "Name: " + name + "\nEmail: " + email + "\n\n" + message
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
       //Email not sent
       if (error) {
-          console.log(error);
-          res.end(res.render('contact', { msg: 'Error occured, message not sent.', err: true, page: 'contact' }));
+          retDict["msg"] = "E";
+          retDict["err"] = true;
+          res.end(res.render('contact', retDict ));
       }
       //Yay!! Email sent
       else {
-          console.log("success");
-          res.end(res.render('contact', { msg: 'Message sent! Thank you.', err: false, page: 'contact' }));
+          retDict["msg"] = "S";
+          retDict["err"] = false;
+          res.end(res.render('contact', retDict ));
       }
   });
 });

@@ -23,25 +23,35 @@ html
               h1.success Thanks for getting in touch!
               h3 I'll reply as soon as I do this one thing...
           else
-            h1 EMAIL
+            h1 Email Me!
+            if(typeof formErr !== 'undefined')
+              h3.formErr Uh oh
 
             form(action='/contact', class='contform' method='post')
               fieldset
                 
                 label(for='name') Name
-                input(name='name', type='text', value='', placeholder='Aubrey Graham', id='name')
+                input(name='name', type='text', value='', placeholder='Aubrey Graham', id='name' required)
+                if(typeof nameErr !== 'undefined')
+                  p.formErr #{nameErr}
 
                 
                 label(for='email') Email
-                input(name='email', type='text', value='', placeholder='ammar@javed.com' id='email')
+                input(name='email', type='text', value='', placeholder='ammar@javed.com' id='email' required)
+                if(typeof emailErr !== 'undefined')
+                  p.formErr #{emailErr}
 
 
                 label(for='subject') Subject
-                input(name='subject', type='text', value='', placeholder="Let's chill!", id='subject')
+                input(name='subject', type='text', value='', placeholder="Let's chill!", id='subject' required)
+                if(typeof subjectErr)
+                  p.formErr #{subjectErr}
 
                 
                 label(for='message') Message
-                textarea(name='message', cols='40', rows='10', id='message')
+                textarea(name='message', cols='40', rows='10', id='message' required)
+                if(typeof messageErr)
+                  p.formErr #{subjectErr}
 
 
                 label

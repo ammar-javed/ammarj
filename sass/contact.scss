@@ -64,6 +64,19 @@ body {
     textarea {
         width: 90%;
     }
+
+    p.formErr {
+        margin: 10px 0 0 15px;
+        color: $name-border-color;
+        font-size: 10px;
+        font-family: $roboto;
+    }
+
+    h3.formErr {
+        color: $name-border-color;
+        font-size: ms(1);
+        font-family: $roboto;
+    }
 }
 
 h1.error {

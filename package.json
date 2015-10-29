@@ -20,7 +20,8 @@
     "lightgallery": "^1.2.6",
     "node-sass": "^3.3.3",
     "node-sass-middleware": "^0.9.6",
-    "nodemailer": "0.7.x"
+    "nodemailer": "0.7.x",
+    "validator": "^4.2.1"
   },
   "repository": {
     "type": "git",
