@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sass = require('node-sass-middleware');
 var path = require('path');
-var nodemailer = require('nodemailer')
+var nodemailer = require('nodemailer');
 
 var routes = require('./routes/main');
 
@@ -50,7 +50,9 @@ app.use('/', routes);
 app.use('/img', express.static('img'));
 app.use('/fonts', express.static('fonts'));
 
+// POST endpoint for contact form
 app.post('/contact', function (req, res) {
+
   var mailOpts, smtpTrans;
   //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
   smtpTrans = nodemailer.createTransport('SMTP', {
@@ -80,6 +82,7 @@ app.post('/contact', function (req, res) {
       }
   });
 });
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

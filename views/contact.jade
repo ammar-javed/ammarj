@@ -17,9 +17,11 @@ html
 
           if(typeof msg !== 'undefined')
             if(!!err)
-              console.log("Error")
+              h1.error Eh...
+              h3 Something went wrong when sending an email to this guy. Yell at him on twitter to fix me!
             else
-              console.log("Success")
+              h1.success Thanks for getting in touch!
+              h3 I'll reply as soon as I do this one thing...
           else
             h1 EMAIL
 

@@ -65,3 +65,11 @@ body {
         width: 90%;
     }
 }
+
+h1.error {
+    color: $name-border-color;
+}
+
+h1.success {
+    color: $limegreen;
+}
