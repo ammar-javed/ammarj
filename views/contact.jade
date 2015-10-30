@@ -8,6 +8,7 @@ html
         title AJ | Contact Me
         link(rel='stylesheet', href='stylesheets/contact.css')
         link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
+        script(type='text/javascript', src="https://www.google.com/recaptcha/api.js")
 
         //Navbar
         include nav/navbar.jade
@@ -31,27 +32,44 @@ html
               fieldset
                 
                 label(for='name') Name
-                input(name='name', type='text', value='', placeholder='Aubrey Graham', id='name' required)
+                if(typeof name !== 'undefined')
+                  input(name='name', type='text', placeholder='Aubrey Graham', id='name', value="#{name}" required)
+                else
+                  input(name='name', type='text', placeholder='Aubrey Graham', id='name' value="" required)
                 if(typeof nameErr !== 'undefined')
                   p.formErr #{nameErr}
 
+
                 
                 label(for='email') Email
-                input(name='email', type='text', value='', placeholder='ammar@javed.com' id='email' required)
+                if(typeof email !== 'undefined')
+                  input(name='email', type='text', placeholder='ammar@javed.com', id='email', value="#{email}" required)
+                else
+                  input(name='email', type='text', placeholder='ammar@javed.com', id='email', value="" required)
                 if(typeof emailErr !== 'undefined')
                   p.formErr #{emailErr}
 
 
                 label(for='subject') Subject
-                input(name='subject', type='text', value='', placeholder="Let's chill!", id='subject' required)
+                if(typeof subject !== 'undefined')
+                  input(name='subject', type='text', placeholder="Let's chill!", id='subject', value="#{subject}" required)
+                else
+                  input(name='subject', type='text', placeholder="Let's chill!", id='subject', value="" required)
                 if(typeof subjectErr)
                   p.formErr #{subjectErr}
 
                 
                 label(for='message') Message
                 textarea(name='message', cols='40', rows='10', id='message' required)
+                  if(typeof message !== 'undefined')
+                    | #{message}
                 if(typeof messageErr)
                   p.formErr #{subjectErr}
+
+                // Captcha for the bots
+                div(data-sitekey="6LdMYQ8TAAAAAP0m1W67JisQenu63NEA79I-h1ti").g-recaptcha
+                if(typeof captchaErr !== 'undefined')
+                  p.formErr #{captchaErr}
 
 
                 label

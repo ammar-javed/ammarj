@@ -11,6 +11,7 @@ var nodemailer = require('nodemailer');
 var validator = require('validator');
 
 var routes = require('./routes/main');
+var https = require('https');
 
 var app = express();
 
@@ -61,6 +62,26 @@ app.post('/contact', function (req, res) {
   var retDict = {};
   var formErr = false;
 
+  // Captcha Verification
+  if (req.body["g-recaptcha-response"] !== ""){
+    https.get("https://www.google.com/recaptcha/api/siteverify?secret=" + config.captcha.secret_key + "&response=" + req.body["g-recaptcha-response"], function(res) {
+      var data = "";
+      res.on('data', function (chunk) {
+        data += chunk.toString();
+      });
+      res.on('end', function() {
+        var parsedData = JSON.parse(data);
+        if(parsedData.success){
+          retDict['captchaErr'] = "Google couldn't verify you as a human! Please try again.";
+          formErr = true;
+        }
+      });
+    });
+  } else {
+    retDict['captchaErr'] = "Please click the checkmark for verification!";
+    formErr = true;
+  }
+
   //Validations
   if ( !validator.isEmail(email) ) {
     retDict["emailErr"] = "The email address doesn't seem right!";
@@ -70,8 +91,6 @@ app.post('/contact', function (req, res) {
   if ( validator.equals( validator.trim(name), "" ) ) {
     retDict["nameErr"] = "What is your name?";
     formErr = true;
-  } else {
-    console.log("Name wasn't blank");
   }
 
   if ( validator.equals( validator.trim(subject), "" ) ) {
@@ -84,13 +103,17 @@ app.post('/contact', function (req, res) {
     formErr = true;
   }
 
-  console.log(retDict);
-
   if ( formErr ) {
     retDict["formErr"] = true;
+    retDict["name"] = name;
+    retDict["email"] = email;
+    retDict["subject"] = subject;
+    retDict["message"] = message;
     res.end(res.render('contact', retDict));
     return;
   }
+
+  console.log(retDict);
 
   var mailOpts, smtpTrans;
   //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
@@ -104,7 +127,7 @@ app.post('/contact', function (req, res) {
   //Mail options
   mailOpts = {
       from: name + ' &lt;' + email + '&gt;', //grab form data from the request body object
-      to: config.defaults.contact_send_to_email,
+      bcc: config.defaults.contact_send_to_email + ' &lt;' + email + ' &lt;',
       subject: '[Contact Form] ' + subject,
       text: "Name: " + name + "\nEmail: " + email + "\n\n" + message
   };

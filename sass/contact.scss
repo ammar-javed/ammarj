@@ -6,6 +6,7 @@
 
 $ms-base: 1em;
 $ms-ratio: $golden;
+$button-transition-dur: 0.3s;
 
 body {
   background: url('/img/exp.png');
@@ -63,6 +64,22 @@ body {
 
     textarea {
         width: 90%;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+        font-weight: 100;
+        margin: 10px 0 10px 25px;
+        padding: 10px 20px 10px 20px;
+        background: none;
+        border: none;
+        font-family: $roboto;
+        transition: background $button-transition-dur;
+    }
+
+    input[type="submit"]:hover {
+        background: $limegreen;
+        transition: background $button-transition-dur;
     }
 
     p.formErr {
