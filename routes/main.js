@@ -26,4 +26,9 @@ router.get('/contact', function(req, res, next) {
     res.render('contact'); 
 });
 
+/* GET Blogs page. */
+router.get('/blog', function(req, res, next) {
+    res.render('blog'); 
+});
+
 module.exports = router;

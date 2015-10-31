@@ -69,7 +69,7 @@ body {
     input[type="submit"] {
         font-size: 18px;
         font-weight: 100;
-        margin: 10px 0 10px 25px;
+        margin: 5px 0 10px 10px;
         padding: 10px 20px 10px 20px;
         background: none;
         border: none;
@@ -93,6 +93,10 @@ body {
         color: $name-border-color;
         font-size: ms(1);
         font-family: $roboto;
+    }
+
+    .g-recaptcha {
+        margin: 20px 0 10px 10px;
     }
 }
 
