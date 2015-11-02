@@ -24,9 +24,12 @@ $(
     debug: true,
     blacklist: 'form',
     onStart: {
-      duration: 250, // Duration of our animation
+      duration: 1000, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
+        if ($('#homeCont').length) {
+          $('#name h1').addClass('animated fadeOutUp');
+        }
         $container.addClass('is-exiting');
 
         // Restart your animation
@@ -34,13 +37,17 @@ $(
       }
     },
     onReady: {
-      duration: 0,
+      duration: 1000,
       render: function ($container, $newContent) {
         // Remove your CSS animation reversing class
         $container.removeClass('is-exiting');
 
         // Inject the new content
         $container.html($newContent);
+
+        if ($('#homeCont').length) {
+          $('#name h1').addClass('animated fadeInDown');
+        }
 
       }
     },

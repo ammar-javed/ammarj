@@ -1,40 +1,42 @@
 html
   head
+    link(rel='stylesheet', href='lib/animate.min.css')
 
   body
     block content
       #main
-        title AJ | Welcome
-        link(rel='stylesheet', href='stylesheets/home.css')
-        link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
+        #homeCont
+          title AJ | Welcome
+          link(rel='stylesheet', href='stylesheets/home.css')
+          link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
 
-        .grid-container
-          .grid-100
-            table#content-container
+          .grid-container
+            .grid-100
+              table#content-container
 
-              td
-                .grid-25.prefix-20
-                  a(href='/about')#button.button-top.about ABOUT
-                .grid-25.prefix-25
-                  a(href='/contact')#button.button-top.contact CONTACT
+                td
+                  .grid-25.prefix-20
+                    a(href='/about')#button.button-top.about ABOUT
+                  .grid-25.prefix-25
+                    a(href='/contact')#button.button-top.contact CONTACT
 
-                // Breaking up row
-                span.clear
+                  // Breaking up row
+                  span.clear
 
-                table.prefix-30
-                  td
-                    #name
-                      h1 AMMAR JAVED
+                  table.prefix-30
+                    td
+                      #name
+                        h1 AMMAR JAVED
 
-                //Breaking up row
-                span.clear
+                  //Breaking up row
+                  span.clear
 
-                .grid-25.prefix-20
-                   a(href='/projects')#button.button-bottom PROJECTS
-                .grid-25
-                   a(href='/exp')#button.button-bottom EXPERIENCE
-                .grid-25 
-                   a(href='/blog')#button.button-bottom BLOG
+                  .grid-25.prefix-20
+                     a(href='/projects')#button.button-bottom PROJECTS
+                  .grid-25
+                     a(href='/exp')#button.button-bottom EXPERIENCE
+                  .grid-25 
+                     a(href='/blog')#button.button-bottom BLOG
 
       // Footer
       include footer/footer.jade
