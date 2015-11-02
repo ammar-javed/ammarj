@@ -9,7 +9,6 @@ var sass = require('node-sass-middleware');
 var path = require('path');
 var nodemailer = require('nodemailer');
 var validator = require('validator');
-//var minify = require('express-minify');
 
 var routes = require('./routes/main');
 var https = require('https');
@@ -26,12 +25,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-
-// app.use(minify({
-//   js_match: /js/,
-//   css_match: /stylesheets/,
-//   cache: false
-// }));
 
 //Compile from unsemantic folder
 app.use(

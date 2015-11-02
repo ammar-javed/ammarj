@@ -3,43 +3,45 @@ html
 
   body
     #main
-      title AJ | About Me
-      link(rel='stylesheet', href='stylesheets/about.css')
-      link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
+      #aboutCont
+        title AJ | About Me
+        link(rel='stylesheet', href='stylesheets/about.css')
+        link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
 
-      include nav/navbar.jade
+        include nav/navbar.jade
 
-      // Content
-      .contentcontainer
-        p
-          img(src='/img/me.jpg', alt="Beautiful me :D").me
-          h2.quote Stay awhile, and listen.
-          h5.quoter - Deckard Cain
-        p.
-          <i>This might be only place I have used a quote out of the Diablo Series.
-          I have spent countless years of my life on that game, and I will tell anyone who listens about it!</i>
-        p.
-          So a little bit about me; I'm currently a fourth year student, studying at the University of Toronto!
-          I'm starting to look for full time oppertunities now, either in the <u> Software Engineering</u>, <u>Product Management</u> or <u>Consulting roles</u>.
-        p.
-          During highschool, I didn't think I'd be going into computer science! I had come to the university to learn 'programming' so I could see how 3D renderers such as Vray worked.
-          I was really into digital media, 3D modeling, animation, videography, video editing, and basically anything visual I could create on the computer. Funnily enough, my penmanship/drawing skills <b><i>suck</i></b>.
-          So I got into the program, and starting learning this whole new world of algorithms and data structures, the kind of theoretical and discrete math that I used to have nightmares about in highschool, and just fell in love with it! 
-        p.
-          I've interned at a couple of really amazing companies, with cultures that vary like night and day and learned a lot about the kind of career I'm going to be focusing on! If you'd like to chat about that and/or the things I've learned from start up and corporate culture, just hit me up!
-        p.
-          Aside from just designing and tapping away on the keyboard, I love the outdoors and physical activity! After my third university of sitting hunched over books and assignments, and spending nights on campus, I've really started focusing on getting out to kayak, learn to box, and even carpentry!
-        p.
-          If you're a recruiter and you reached the bottom of this page, I'll assume either you're very patient or really interested in contacting me, so please go ahead and shoot me an email from the contact page! If you're not a recruiter, then you can also reach out to me...I guess. <span id='joke'>Joke! Hahahaha..hahaha..ha..got you. Right?</span>
-        p.
-          I kid, anyone and everyone, reach out to me via Linkedin, Twitter or email!
+        // Content
+        .contentcontainer
+          p
+            img(src='/img/me.jpg', alt="Beautiful me :D").me
+            h2.quote Stay awhile, and listen.
+            h5.quoter - Deckard Cain
+          p.
+            <i>This might be only place I have used a quote out of the Diablo Series.
+            I have spent countless years of my life on that game, and I will tell anyone who listens about it!</i>
+          p.
+            So a little bit about me; I'm currently a fourth year student, studying at the University of Toronto!
+            I'm starting to look for full time oppertunities now, either in the <u> Software Engineering</u>, <u>Product Management</u> or <u>Consulting roles</u>.
+          p.
+            During highschool, I didn't think I'd be going into computer science! I had come to the university to learn 'programming' so I could see how 3D renderers such as Vray worked.
+            I was really into digital media, 3D modeling, animation, videography, video editing, and basically anything visual I could create on the computer. Funnily enough, my penmanship/drawing skills <b><i>suck</i></b>.
+            So I got into the program, and starting learning this whole new world of algorithms and data structures, the kind of theoretical and discrete math that I used to have nightmares about in highschool, and just fell in love with it! 
+          p.
+            I've interned at a couple of really amazing companies, with cultures that vary like night and day and learned a lot about the kind of career I'm going to be focusing on! If you'd like to chat about that and/or the things I've learned from start up and corporate culture, just hit me up!
+          p.
+            Aside from just designing and tapping away on the keyboard, I love the outdoors and physical activity! After my third university of sitting hunched over books and assignments, and spending nights on campus, I've really started focusing on getting out to kayak, learn to box, and even carpentry!
+          p.
+            If you're a recruiter and you reached the bottom of this page, I'll assume either you're very patient or really interested in contacting me, so please go ahead and shoot me an email from the contact page! If you're not a recruiter, then you can also reach out to me...I guess. <span id='joke'>Joke! Hahahaha..hahaha..ha..got you. Right?</span>
+          p.
+            I kid, anyone and everyone, reach out to me via Linkedin, Twitter or email!
 
 
           
       // Footer
       include footer/footer.jade
 
-
+    link(rel='stylesheet', href='stylesheets/common.css')
+    link(rel='stylesheet', href='stylesheets/animate.css')
     script(rel='javascript', src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
     script(rel='javascript', src="lib/jquery.smoothState.min.js")
     script(rel='javascript', src='js/controller.js')
