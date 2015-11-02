@@ -1,5 +1,12 @@
+////////////////////////////////////////////
+//
+//  Helper function, checking to see if 
+//  Plugin as already been loaded, if not
+//  then set a callback to check again in
+//  50 MS. If loaded, then init the plugin.
+//
+////////////////////////////////////////////
 var isoCheck = function () {
-
   if (jQuery().isotope) {
     $('.gal-grid').isotope({
       itemSelector: '.gal-item',
@@ -13,6 +20,12 @@ var isoCheck = function () {
   }
 }
 
+////////////////////////////////////////////
+//
+//  Main smoothState Driver
+//
+////////////////////////////////////////////
+
 $(
   function(){
   'use strict';
@@ -23,12 +36,19 @@ $(
     cacheLength: 0,
     debug: true,
     blacklist: 'form',
+    ////////////////////////////////////////////
+    //
+    //  Page Exiting Animations
+    //
+    ////////////////////////////////////////////
     onStart: {
       duration: 1000, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         if ($('#homeCont').length) {
-          $('#name h1').addClass('animated fadeOutUp');
+          $('#name h1').addClass('animated fadeOut');
+          $('.button-top').addClass('animated fadeOutUp');
+          $('.button-bottom').addClass('animated fadeOutDown');
         }
         $container.addClass('is-exiting');
 
@@ -36,6 +56,11 @@ $(
         smoothState.restartCSSAnimations();
       }
     },
+    ////////////////////////////////////////////
+    //
+    //  Page Loaded Animations
+    //
+    ////////////////////////////////////////////
     onReady: {
       duration: 1000,
       render: function ($container, $newContent) {
@@ -46,11 +71,19 @@ $(
         $container.html($newContent);
 
         if ($('#homeCont').length) {
-          $('#name h1').addClass('animated fadeInDown');
+          $('#name h1').addClass('animated fadeIn');
+          $('#name').addClass('animated fadeInRight');
+          $('.button-top').addClass('animated fadeInDown');
+          $('.button-bottom').addClass('animated fadeInUp');
         }
 
       }
     },
+    ////////////////////////////////////////////
+    //
+    //  Load/Init Page Plugins
+    //
+    ////////////////////////////////////////////
     onAfter: function ($container, $newContent) {
 
       if ($('#projectsCont').length) {
@@ -68,6 +101,11 @@ $(
   },
   smoothState = $('#main').smoothState(options).data('smoothState');
 
+  ////////////////////////////////////////////
+  //
+  //  Direct Page Load Plugin init
+  //
+  ////////////////////////////////////////////
   if ($('#projectsCont').length) {
 
     $("#lightgallery").lightGallery({
@@ -83,6 +121,23 @@ $(
       }
     });
 
+  }
+
+  ////////////////////////////////////////////
+  //
+  //  Direct Page Loaded Animations
+  //
+  ////////////////////////////////////////////
+
+  if ($('#homeCont').length) {
+    $('#name h1').addClass('animated fadeIn');
+    $('#name').addClass('animated fadeInRight');
+    $('.button-top').addClass('animated fadeInDown');
+    $('.button-bottom').addClass('animated fadeInUp');
+
+    $('.twitter').addClass('animated FadeInLeftBig');
+    $('.facebook').addClass('animated fadeIn');
+    $('.linkedin').addClass('animated FadeInRightFooter');
   }
 
   }

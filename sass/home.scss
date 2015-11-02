@@ -6,6 +6,11 @@
 $ms-base: 1em;
 $ms-ratio: $golden;
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background: url('/img/exp.png');
   background-size: cover;
@@ -103,4 +108,50 @@ footer {
   left: 0;
   padding: 1rem;
   text-align: center;
+  overflow: hidden;
+
+  .twitter {
+    -webkit-animation-delay: 1s;
+    -webkit-animation-duration: 2s;
+  }
+
+  .facebook {
+    -webkit-animation-delay: 1.2s;
+    -webkit-animation-duration: 2s;
+  }
+
+  .linkedin {
+    -webkit-animation-delay: 1.4s;
+    -webkit-animation-duration: 2s;
+  }
+}
+
+.about {
+  -webkit-animation-delay: 0.2s;
+}
+
+.contact {
+  -webkit-animation-delay: 0.4s;
+}
+
+.projects {
+  -webkit-animation-delay: 0.6s;
+}
+
+.experience {
+  -webkit-animation-delay: 0.8s;
+}
+
+.blog {
+  -webkit-animation-delay: 0.9s;
+}
+
+#name h1 {
+  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 3s;
+}
+
+#name {
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
 }
