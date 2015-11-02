@@ -9,6 +9,7 @@ var sass = require('node-sass-middleware');
 var path = require('path');
 var nodemailer = require('nodemailer');
 var validator = require('validator');
+//var minify = require('express-minify');
 
 var routes = require('./routes/main');
 var https = require('https');
@@ -26,23 +27,31 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Compile from main /Sass folder
+// app.use(minify({
+//   js_match: /js/,
+//   css_match: /stylesheets/,
+//   cache: false
+// }));
+
+//Compile from unsemantic folder
 app.use(
    sass({
        src: __dirname + '/sass/unsemantic',
        dest: __dirname + '/public/stylesheets',
        prefix:  '/stylesheets',
-       debug: true,       
+       debug: true,
+       outputStyle: 'compressed'   
    })
 ); 
 
-//Compile from unsemantic folder
+// Compile from main /Sass folder
 app.use(
    sass({
        src: __dirname + '/sass',
        dest: __dirname + '/public/stylesheets',
        prefix:  '/stylesheets',
-       debug: true,       
+       debug: true, 
+       outputStyle: 'compressed'      
    })
 ); 
 

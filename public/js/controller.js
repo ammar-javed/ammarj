@@ -49,6 +49,10 @@ $(
           $('#name h1').addClass('animated fadeOut');
           $('.button-top').addClass('animated fadeOutUp');
           $('.button-bottom').addClass('animated fadeOutDown');
+
+          $('.twitter').addClass('animated fadeOutLeft');
+          $('.facebook').addClass('animated fadeOut');
+          $('.linkedin').addClass('animated FadeOutRight');
         }
         $container.addClass('is-exiting');
 
@@ -75,6 +79,10 @@ $(
           $('#name').addClass('animated fadeInRight');
           $('.button-top').addClass('animated fadeInDown');
           $('.button-bottom').addClass('animated fadeInUp');
+
+          $('.twitter').addClass('animated FadeInLeftFooter');
+          $('.facebook').addClass('animated fadeIn');
+          $('.linkedin').addClass('animated FadeInRightFooter');
         }
 
       }
@@ -135,7 +143,7 @@ $(
     $('.button-top').addClass('animated fadeInDown');
     $('.button-bottom').addClass('animated fadeInUp');
 
-    $('.twitter').addClass('animated FadeInLeftBig');
+    $('.twitter').addClass('animated FadeInLeftFooter');
     $('.facebook').addClass('animated fadeIn');
     $('.linkedin').addClass('animated FadeInRightFooter');
   }

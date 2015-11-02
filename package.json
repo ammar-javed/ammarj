@@ -17,6 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "express-minify": "^0.1.6",
     "lightgallery": "^1.2.6",
     "node-sass": "^3.3.3",
     "node-sass-middleware": "^0.9.6",
