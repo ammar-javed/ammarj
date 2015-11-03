@@ -145,12 +145,13 @@ $(
             $(info).css("-webkit-animation-delay", String(delay+0.6)+"s");
             $(info).css("-webkit-animation-duration", "2s");
 
-            // $(this).find('.gal-item').each( function (e) {
-            //   var picDelay = delay;
-            //   $(this).addClass('animated fadeIn');
-            //   $(this).css("-webkit-animation-delay", String(picDelay+0.2)+"s");
-            //   $(this).css("-webkit-animation-duration", "2s");
-            // });
+            var picDelay = delay;
+            $('.gal-item img').each( function (e) {
+              $(this).addClass('animated fadeInUp');
+              $(this).css("-webkit-animation-delay", String(picDelay+1)+"s");
+              $(this).css("-webkit-animation-duration", "2s");
+              picDelay+=0.2;
+            });
 
             delay+=0.5;
           });
@@ -256,12 +257,13 @@ $(
       $(info).css("-webkit-animation-delay", String(delay+0.6)+"s");
       $(info).css("-webkit-animation-duration", "2s");
 
-      // $(this).find('.gal-item').each( function (e) {
-      //   var picDelay = delay;
-      //   $(this).addClass('animated fadeIn');
-      //   $(this).css("-webkit-animation-delay", String(picDelay+0.2)+"s");
-      //   $(this).css("-webkit-animation-duration", "2s");
-      // });
+      var picDelay = delay;
+      $('.gal-item img').each( function (e) {
+        $(this).addClass('animated fadeInUp');
+        $(this).css("-webkit-animation-delay", String(picDelay+1)+"s");
+        $(this).css("-webkit-animation-duration", "2s");
+        picDelay+=0.2;
+      });
 
       delay+=0.5;
     });
