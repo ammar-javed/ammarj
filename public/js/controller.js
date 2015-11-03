@@ -42,18 +42,34 @@ $(
     //
     ////////////////////////////////////////////
     onStart: {
-      duration: 1200, // Duration of our animation
+      duration: 1500, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         if ($('#homeCont').length) {
-          $('#name h1').addClass('animated fadeOut');
+          $('#name').addClass('animated fadeOut');
           $('.button-top').addClass('animated fadeOutUp');
           $('.button-bottom').addClass('animated fadeOutDown');
-
-          $('.twitter').addClass('animated fadeOut');
-          $('.facebook').addClass('animated fadeOut');
-          $('.linkedin').addClass('animated FadeOutRight');
+        }  else {
+          $('li.name').addClass('animated nameOut fadeOutUp');
+          $('li.about').addClass('animated aboutOut fadeOutUp');
+          $('li.projects').addClass('animated projectsOut fadeOutUp');
+          $('li.exp').addClass('animated expOut fadeOutUp');
+          $('li.contact').addClass('animated contactOut fadeOutUp');
+          $('li.blog').addClass('animated blogOut fadeOutUp');
         }
+
+        if ($("#aboutCont").length) {
+          $('.contentcontainer').addClass('animated fadeOut');
+          $('.me').addClass('animated zoomOut');
+          $('.quote').addClass('animated fadeOut');
+          $('.quoter').addClass('animated fadeOut');
+          $('.blurb').addClass('animated fadeOut');
+        }
+
+        $('.twitter').addClass('animated fadeOutLeft twitterOut');
+        $('.facebook').addClass('animated fadeOut facebookOut');
+        $('.linkedin').addClass('animated FadeOutRight linkedinOut');
+
         $container.addClass('is-exiting');
 
         // Restart your animation
@@ -79,11 +95,26 @@ $(
           $('#name').addClass('animated fadeInRight');
           $('.button-top').addClass('animated fadeInDown');
           $('.button-bottom').addClass('animated fadeInUp');
-
-          $('.twitter').addClass('animated FadeInLeftFooter');
-          $('.facebook').addClass('animated fadeIn');
-          $('.linkedin').addClass('animated FadeInRightFooter');
+        }  else {
+          $('li.name').addClass('animated fadeInDown');
+          $('li.about').addClass('animated fadeInDown');
+          $('li.projects').addClass('animated fadeInDown');
+          $('li.exp').addClass('animated fadeInDown');
+          $('li.contact').addClass('animated fadeInDown');
+          $('li.blog').addClass('animated fadeInDown');
         }
+
+        if ($("#aboutCont").length) {
+          $('.contentcontainer').addClass('animated fadeIn');
+          $('.me').addClass('animated flipInX');
+          $('.quote').addClass('animated fadeInLeftFooter');
+          $('.quoter').addClass('animated fadeInRight');
+          $('.blurb').addClass('animated fadeIn');
+        }
+
+        $('.twitter').addClass('animated FadeInLeftFooter');
+        $('.facebook').addClass('animated fadeIn');
+        $('.linkedin').addClass('animated FadeInRightFooter');
 
       }
     },
@@ -142,11 +173,26 @@ $(
     $('#name').addClass('animated fadeInRight');
     $('.button-top').addClass('animated fadeInDown');
     $('.button-bottom').addClass('animated fadeInUp');
+  } else {
+    $('li.name').addClass('animated fadeInDown');
+    $('li.about').addClass('animated fadeInDown');
+    $('li.projects').addClass('animated fadeInDown');
+    $('li.exp').addClass('animated fadeInDown');
+    $('li.contact').addClass('animated fadeInDown');
+    $('li.blog').addClass('animated fadeInDown');
+  }
+
+  if ($("#aboutCont").length) {
+    $('.contentcontainer').addClass('animated fadeIn');
+    $('.me').addClass('animated flipInX');
+    $('.quote').addClass('animated fadeInLeftFooter');
+    $('.quoter').addClass('animated fadeInRight');
+    $('.blurb').addClass('animated fadeIn');
+  }
 
     $('.twitter').addClass('animated FadeInLeftFooter');
     $('.facebook').addClass('animated fadeIn');
     $('.linkedin').addClass('animated FadeInRightFooter');
-  }
 
   }
 );

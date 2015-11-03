@@ -104,20 +104,6 @@ footer {
   text-align: center;
   overflow: hidden;
 
-  .twitter {
-    -webkit-animation-delay: 1s;
-    -webkit-animation-duration: 2s;
-  }
-
-  .facebook {
-    -webkit-animation-delay: 1.2s;
-    -webkit-animation-duration: 2s;
-  }
-
-  .linkedin {
-    -webkit-animation-delay: 1s;
-    -webkit-animation-duration: 2s;
-  }
 }
 
 .about {
@@ -141,7 +127,7 @@ footer {
 }
 
 #name h1 {
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-duration: 3s;
 }
 
