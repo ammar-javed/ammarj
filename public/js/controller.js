@@ -88,6 +88,10 @@ $(
           });
         }
 
+        if ($('#contactform').length) {
+          $('.contactContent').addClass('animated fadeOutUp15');
+        }
+
         $('.twitter').addClass('animated fadeOutLeft twitterOut');
         $('.facebook').addClass('animated fadeOut facebookOut');
         $('.linkedin').addClass('animated FadeOutRight linkedinOut');
@@ -202,6 +206,10 @@ $(
 
             delay+=0.4;
           });
+        }
+
+        if ($('#contactform').length) {
+          $('.contactContent').addClass('animated fadeInDown');
         }
 
         $('.twitter').addClass('animated FadeInLeftFooter');
@@ -350,6 +358,10 @@ $(
 
       delay+=0.4;
     });
+  }
+
+  if ($('#contactform').length) {
+    $('.contactContent').addClass('animated fadeInDown');
   }
 
   $('.twitter').addClass('animated FadeInLeftFooter');
