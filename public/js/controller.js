@@ -66,6 +66,17 @@ $(
           $('.blurb').addClass('animated fadeOut');
         }
 
+        if ($('#projectsCont').length) {
+          var delay = 0.3;
+          $('.panel').each( function (i) {
+            $(this).addClass('animated zoomOut');
+            $(this).css("-webkit-animation-delay", String(delay)+"s");
+            $(this).css("-webkit-animation-duration", "2s");
+          });
+
+          delay+=0.2;
+        }
+
         $('.twitter').addClass('animated fadeOutLeft twitterOut');
         $('.facebook').addClass('animated fadeOut facebookOut');
         $('.linkedin').addClass('animated FadeOutRight linkedinOut');
@@ -110,6 +121,39 @@ $(
           $('.quote').addClass('animated fadeInLeftFooter');
           $('.quoter').addClass('animated fadeInRight');
           $('.blurb').addClass('animated fadeIn');
+        }
+
+        if ($('#projectsCont').length) {
+          var delay = 0.3;
+          $('.panel').each( function (i) {
+            $(this).addClass('animated fadeIn');
+            $(this).css("-webkit-animation-delay", String(delay)+"s");
+            $(this).css("-webkit-animation-duration", "2s");
+
+            var spacer = $(this).find(".or-spacer");
+            $(spacer).addClass('animated zoomIn');
+            $(spacer).css("-webkit-animation-delay", String(delay+0.2)+"s");
+            $(spacer).css("-webkit-animation-duration", "2s");
+
+            var title = $(this).find("h1");
+            $(title).addClass('animated fadeInDown');
+            $(title).css("-webkit-animation-delay", String(delay+0.4)+"s");
+            $(title).css("-webkit-animation-duration", "2s");
+
+            var info = $(this).find(".info");
+            $(info).addClass('animated fadeInDown');
+            $(info).css("-webkit-animation-delay", String(delay+0.6)+"s");
+            $(info).css("-webkit-animation-duration", "2s");
+
+            // $(this).find('.gal-item').each( function (e) {
+            //   var picDelay = delay;
+            //   $(this).addClass('animated fadeIn');
+            //   $(this).css("-webkit-animation-delay", String(picDelay+0.2)+"s");
+            //   $(this).css("-webkit-animation-duration", "2s");
+            // });
+
+            delay+=0.5;
+          });
         }
 
         $('.twitter').addClass('animated FadeInLeftFooter');
@@ -190,9 +234,42 @@ $(
     $('.blurb').addClass('animated fadeIn');
   }
 
-    $('.twitter').addClass('animated FadeInLeftFooter');
-    $('.facebook').addClass('animated fadeIn');
-    $('.linkedin').addClass('animated FadeInRightFooter');
+  if ($('#projectsCont').length) {
+    var delay = 0.3;
+    $('.panel').each( function (i) {
+      $(this).addClass('animated fadeIn');
+      $(this).css("-webkit-animation-delay", String(delay)+"s");
+      $(this).css("-webkit-animation-duration", "2s");
+
+      var spacer = $(this).find(".or-spacer");
+      $(spacer).addClass('animated zoomIn');
+      $(spacer).css("-webkit-animation-delay", String(delay+0.2)+"s");
+      $(spacer).css("-webkit-animation-duration", "2s");
+
+      var title = $(this).find("h1");
+      $(title).addClass('animated fadeInDown');
+      $(title).css("-webkit-animation-delay", String(delay+0.4)+"s");
+      $(title).css("-webkit-animation-duration", "2s");
+
+      var info = $(this).find(".info");
+      $(info).addClass('animated fadeInDown');
+      $(info).css("-webkit-animation-delay", String(delay+0.6)+"s");
+      $(info).css("-webkit-animation-duration", "2s");
+
+      // $(this).find('.gal-item').each( function (e) {
+      //   var picDelay = delay;
+      //   $(this).addClass('animated fadeIn');
+      //   $(this).css("-webkit-animation-delay", String(picDelay+0.2)+"s");
+      //   $(this).css("-webkit-animation-duration", "2s");
+      // });
+
+      delay+=0.5;
+    });
+  }
+
+  $('.twitter').addClass('animated FadeInLeftFooter');
+  $('.facebook').addClass('animated fadeIn');
+  $('.linkedin').addClass('animated FadeInRightFooter');
 
   }
 );
