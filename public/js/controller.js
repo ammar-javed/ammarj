@@ -42,7 +42,7 @@ $(
     //
     ////////////////////////////////////////////
     onStart: {
-      duration: 1000, // Duration of our animation
+      duration: 1200, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         if ($('#homeCont').length) {
@@ -50,7 +50,7 @@ $(
           $('.button-top').addClass('animated fadeOutUp');
           $('.button-bottom').addClass('animated fadeOutDown');
 
-          $('.twitter').addClass('animated fadeOutLeft');
+          $('.twitter').addClass('animated fadeOut');
           $('.facebook').addClass('animated fadeOut');
           $('.linkedin').addClass('animated FadeOutRight');
         }

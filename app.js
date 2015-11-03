@@ -115,8 +115,6 @@ app.post('/contact', function (req, res) {
     return;
   }
 
-  console.log(retDict);
-
   var mailOpts, smtpTrans;
   //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
   smtpTrans = nodemailer.createTransport('SMTP', {
