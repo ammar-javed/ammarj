@@ -117,9 +117,9 @@ $(
         //Giving a nice transition to [colored] navbar
         $('.navbar').css('background-color', 'transparent');
 
-        $('.twitter').addClass('animated fadeOutLeft twitterOut');
-        $('.facebook').addClass('animated fadeOut facebookOut');
-        $('.linkedin').addClass('animated FadeOutRight linkedinOut');
+        $('.twitter').addClass('animated fadeOutRight twitterOut');
+        $('.facebook').addClass('animated fadeOutRight facebookOut');
+        $('.linkedin').addClass('animated fadeOutRight linkedinOut');
 
         $container.addClass('is-exiting');
 
@@ -242,9 +242,7 @@ $(
           $('.gifContainer').addClass('animated fadeInUp');
         }
 
-        $('.twitter').addClass('animated FadeInLeftFooter');
-        $('.facebook').addClass('animated fadeIn');
-        $('.linkedin').addClass('animated FadeInRightFooter');
+        $('.twitter, .facebook, .linkedin').addClass('animated fadeInLeftFooter');
 
       }
     },
@@ -399,9 +397,7 @@ $(
     $('.gifContainer').addClass('animated fadeInUp');
   }
 
-  $('.twitter').addClass('animated FadeInLeftFooter');
-  $('.facebook').addClass('animated fadeIn');
-  $('.linkedin').addClass('animated FadeInRightFooter');
+  $('.twitter, .facebook, .linkedin').addClass('animated fadeInLeftFooter');
 
   }
 );

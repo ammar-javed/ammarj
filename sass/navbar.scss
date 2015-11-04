@@ -29,6 +29,11 @@ $border-bottom-dur: 0.3;
         margin-right: 1px;
     }
 
+    .social {
+        max-width: 50px;
+        margin: 10px auto;
+    }
+
     /* Aesthetics */
 
     /*Style for menu links*/
@@ -146,23 +151,4 @@ input[type=checkbox]:checked ~ #menu{
     .show-menu {
         display:block;
     }
-}
-
-
-// Footer
-
-.social {
-    a{
-        min-width: 0px;
-        padding-left: 10px;
-    }
-}
-
-footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
 }
