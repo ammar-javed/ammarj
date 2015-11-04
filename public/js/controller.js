@@ -35,7 +35,7 @@ $(
     prefetch: true,
     cacheLength: 0,
     debug: true,
-    blacklist: 'form',
+    blacklist: 'form, .gal-item',
     ////////////////////////////////////////////
     //
     //  Page Exiting Animations
