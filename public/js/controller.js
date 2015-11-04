@@ -92,6 +92,11 @@ $(
           $('.contactContent').addClass('animated fadeOutUp15');
         }
 
+        if ($('#blogshome').length) {
+          $('.blogscontainer').addClass('animated zoomOut');
+        }
+
+
         $('.twitter').addClass('animated fadeOutLeft twitterOut');
         $('.facebook').addClass('animated fadeOut facebookOut');
         $('.linkedin').addClass('animated FadeOutRight linkedinOut');
@@ -210,6 +215,11 @@ $(
 
         if ($('#contactform').length) {
           $('.contactContent').addClass('animated fadeInDown');
+        }
+
+        if ($('#blogshome').length) {
+          $('.blogscontainer').addClass('animated fadeIn');
+          $('.gifContainer').addClass('animated fadeInUp');
         }
 
         $('.twitter').addClass('animated FadeInLeftFooter');
@@ -362,6 +372,11 @@ $(
 
   if ($('#contactform').length) {
     $('.contactContent').addClass('animated fadeInDown');
+  }
+
+  if ($('#blogshome').length) {
+    $('.blogscontainer').addClass('animated fadeIn');
+    $('.gifContainer').addClass('animated fadeInUp');
   }
 
   $('.twitter').addClass('animated FadeInLeftFooter');

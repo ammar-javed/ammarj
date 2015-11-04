@@ -18,6 +18,8 @@ $ms-ratio: $golden;
     -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    -webkit-animation-delay: 0.75s;
+    -webkit-animation-duration: 2s;
 
 
     p {
@@ -44,6 +46,8 @@ $ms-ratio: $golden;
 
     .gifContainer {
         margin: 20px auto 20px auto;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-duration: 1s;
 
         iframe {
             display: block;
