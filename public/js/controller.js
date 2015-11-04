@@ -1,5 +1,23 @@
 ////////////////////////////////////////////
 //
+//  Changes colour of navbar on scrolling
+//
+////////////////////////////////////////////
+$(document).ready(function() {       
+   var scroll_start = 0;
+   var offset = $('.xp').offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop()+50; // Adding some offset to change color when the bottom of the navbar hits the elements, not the top.
+      if(scroll_start > offset.top) {
+          $('.navbar').css('background-color', 'rgba(47, 48, 51, 0.8)');
+       } else {
+          $('.navbar').css('background-color', 'transparent');
+       }
+   });
+});
+
+////////////////////////////////////////////
+//
 //  Helper function, checking to see if 
 //  Plugin as already been loaded, if not
 //  then set a callback to check again in
@@ -77,7 +95,7 @@ $(
           delay+=0.2;
         }
 
-        if ($('#expriences').length) {
+        if ($('#experiences').length) {
           var delay = 0.3;
           $('.xp').each( function (a) {
             $(this).addClass('animated zoomOut');
@@ -95,7 +113,9 @@ $(
         if ($('#blogshome').length) {
           $('.blogscontainer').addClass('animated zoomOut');
         }
-
+        
+        //Giving a nice transition to [colored] navbar
+        $('.navbar').css('background-color', 'transparent');
 
         $('.twitter').addClass('animated fadeOutLeft twitterOut');
         $('.facebook').addClass('animated fadeOut facebookOut');
@@ -177,7 +197,7 @@ $(
           });
         }
 
-        if ($('#expriences').length) {
+        if ($('#experiences').length) {
           var delay = 0.3;
           $('.xp').each( function (a) {
             $(this).addClass('animated fadeIn');
@@ -334,7 +354,7 @@ $(
     });
   }
 
-  if ($('#expriences').length) {
+  if ($('#experiences').length) {
     var delay = 0.3;
     $('.xp').each( function (a) {
       $(this).addClass('animated fadeIn');

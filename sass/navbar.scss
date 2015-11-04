@@ -7,6 +7,9 @@ $button-transition-dur: 0.3s;
 $border-bottom-dur: 0.3;
 /* Menu! */
 
+.header {
+    height:75px;
+}
 /*Strip the ul of padding and list styling*/
 .navbar {
     list-style-type:none;
@@ -15,9 +18,9 @@ $border-bottom-dur: 0.3;
     font-family: $roboto;
     font-weight: 100;
     position: fixed;
-    //background-color: rgba(47, 48, 51, 0.5);
     width: 100%;
     z-index: 99999;
+    transition-duration: 0.2s;
 
     /*Create a horizontal list with spacing*/
     li {
