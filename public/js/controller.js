@@ -5,10 +5,9 @@
 ////////////////////////////////////////////
 $(document).ready(function() {       
    var scroll_start = 0;
-   var offset = $('.xp').offset();
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop()+50; // Adding some offset to change color when the bottom of the navbar hits the elements, not the top.
-      if(scroll_start > offset.top) {
+      if(scroll_start > 100) {
           $('.navbar').css('background-color', 'rgba(47, 48, 51, 0.8)');
        } else {
           $('.navbar').css('background-color', 'transparent');
