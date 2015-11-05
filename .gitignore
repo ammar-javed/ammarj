@@ -21,6 +21,7 @@
 
 # Ignore config file which will have passwords and keys
 config.js
+*.pem
 
 # Ignore processed .css files; will be rebuit anyways
 /public/stylesheets
