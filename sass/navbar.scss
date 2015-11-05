@@ -30,8 +30,16 @@ $border-bottom-dur: 0.3;
     }
 
     .social {
-        max-width: 50px;
-        margin: 10px auto;
+        display:inline-block;
+        float: left;
+        margin-right: 1px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+        a {
+            max-width: 40px;
+            height: 40px;   
+        }
     }
 
     /* Aesthetics */
