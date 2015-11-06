@@ -76,7 +76,7 @@ $border-bottom-dur: 0.3;
 
 /*Hover state for top level links*/
 .nav:hover a {
-    background: $limegreen;
+    background: $navbar-hover;
     transition: background $button-transition-dur;
 }
 
