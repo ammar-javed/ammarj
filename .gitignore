@@ -25,3 +25,12 @@ config.js
 
 # Ignore processed .css files; will be rebuit anyways
 /public/stylesheets
+
+# Server things to ignore
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.npm/
+.ssh/
+.viminfo
