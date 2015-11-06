@@ -60,7 +60,7 @@ $border-bottom-dur: 0.3;
 }
 
 .name {
-    border-right: thin solid $name-border-color;
+    border-right: thin solid $navbar-name-seperator;
 }
 
 .name a {
