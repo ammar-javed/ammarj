@@ -25,7 +25,7 @@ $ms-ratio: $golden;
     .quote {
         font-size: ms(2);
         font-family: $opensans;
-        color: $name-border-color;
+        color: $quote;
         line-height: 120%;
         font-style: italic;
         padding-left: 20px;
@@ -34,7 +34,7 @@ $ms-ratio: $golden;
     }
 
     .quoter {
-        color: rgba(50, 82, 117, 1);
+        color: $quoter;
         line-height: 120%;
         font-style: italic;
         padding-left: 20px;

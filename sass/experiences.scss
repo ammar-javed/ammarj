@@ -27,14 +27,14 @@ $ms-ratio: $golden;
         font-family: $opensans;
         font-weight: 100;
         text-align: center;
-        color: rgba(50, 82, 117, 1);
+        color: $h1-title;
     }
 
     h3 {
         font-family: $opensans;
         font-weight: 100;
         text-align: center;
-        color: rgba(50, 82, 117, 1);
+        color: $h3-title;
         margin-top: 5px;
     }
 
@@ -60,7 +60,7 @@ $ms-ratio: $golden;
         font-family: $roboto;
         font-size: 10pt;
         font-weight: 400;
-        color: rgba(142, 107, 95, 1);
+        color: $info;
 
         .capacity {
             text-align: center;

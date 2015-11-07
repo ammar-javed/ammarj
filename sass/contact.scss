@@ -55,7 +55,7 @@ $button-transition-dur: 0.3s;
 
     textarea:focus, input[type="text"]:focus {
         outline: none;
-        border-bottom: solid 2px $name-border-color;
+        border-bottom: solid 2px $input-field-focus;
     }
 
     textarea {
@@ -74,19 +74,19 @@ $button-transition-dur: 0.3s;
     }
 
     input[type="submit"]:hover {
-        background: $limegreen;
+        background: $submit;
         transition: background $button-transition-dur;
     }
 
     p.formErr {
         margin: 10px 0 0 15px;
-        color: $name-border-color;
+        color: $formErr;
         font-size: 10px;
         font-family: $roboto;
     }
 
     h3.formErr {
-        color: $name-border-color;
+        color: $formErr;
         font-size: ms(1);
         font-family: $roboto;
     }
@@ -97,9 +97,9 @@ $button-transition-dur: 0.3s;
 }
 
 h1.error {
-    color: $name-border-color;
+    color: $formErr;
 }
 
 h1.success {
-    color: $limegreen;
+    color: $h1-title;
 }
