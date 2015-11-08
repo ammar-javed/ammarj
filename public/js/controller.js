@@ -22,7 +22,7 @@ $(document).ready(function() {
    var scroll_start = 0;
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop()+50; // Adding some offset to change color when the bottom of the navbar hits the elements, not the top.
-      if(scroll_start > 100) {
+      if(scroll_start > 100 && $(window).width() > 1024) {
           $('.navbar').css('background-color', 'rgba(47, 48, 51, 0.8)');
        } else {
           $('.navbar').css('background-color', 'transparent');
