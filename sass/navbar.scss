@@ -90,17 +90,17 @@ $border-bottom-dur: 0.3;
     }
 
     .top {
-        background: rgba(47, 48, 51, 0.8);
+        background: none;
         height: 75px;
     }
 
     a.res-menu {
-      position: absolute;
+      position: fixed;
       z-index: 3;
       text-decoration: none;
       top: 20px;
-      right: 20px;
-      color: #fff;
+      left: 20px;
+      color: $mobile-menu;
       text-transform: uppercase;
       font-size: ms(1);
       padding: 0px 20px 0px 20px;

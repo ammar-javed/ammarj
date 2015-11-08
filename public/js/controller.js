@@ -44,8 +44,10 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.res-menu').click( function() {
     if ($('.header').css('display') === 'block') {
+      $('.top').css('background', 'none');
       $('.header').css('display', 'none');
     } else {
+      $('.top').css('background', 'rgba(47, 48, 51, 0.8)');
       $('.header').css('display', 'block');
     }
   });
@@ -186,8 +188,10 @@ $(
 
         $('.res-menu').click( function() {
           if ($('.header').css('display') === 'block') {
+            $('.top').css('background', 'none');
             $('.header').css('display', 'none');
           } else {
+            $('.top').css('background', 'rgba(47, 48, 51, 0.8)');
             $('.header').css('display', 'block');
           }
         });
