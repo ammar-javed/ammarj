@@ -1,5 +1,20 @@
 ////////////////////////////////////////////
 //
+//  Calculate viewport
+//  Source: https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript
+//
+////////////////////////////////////////////
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}
+
+////////////////////////////////////////////
+//
 //  Changes colour of navbar on scrolling
 //
 ////////////////////////////////////////////
@@ -63,10 +78,18 @@ $(
       render: function ($container) {
         // Add your CSS animation reversing class
         if ($('#homeCont').length) {
-          $('#name').addClass('animated fadeOut');
-          $('.button-top').addClass('animated fadeOutUp');
-          $('.button-bottom').addClass('animated fadeOutDown');
+
+          $('table #name').addClass('animated fadeOut');
+
+          if ( $(window).width() < 1024 ) {
+            $('.button-top, .button-bottom').addClass('animated fadeOutDown');
+          } else {
+            $('.button-top').addClass('animated fadeOutUp');
+            $('.button-bottom').addClass('animated fadeOutDown');
+          }
+
         }  else {
+          // Navbar
           $('li.name').addClass('animated nameOut fadeOutUp');
           $('li.about').addClass('animated aboutOut fadeOutUp');
           $('li.projects').addClass('animated projectsOut fadeOutUp');
@@ -141,11 +164,19 @@ $(
         $container.html($newContent);
 
         if ($('#homeCont').length) {
+
           $('#name h1').addClass('animated fadeIn');
-          $('#name').addClass('animated fadeInRight');
-          $('.button-top').addClass('animated fadeInDown');
-          $('.button-bottom').addClass('animated fadeInUp');
+
+          if ($(window).width() < 1024) {
+            $('.button-top, .button-bottom, #name').addClass('animated fadeInUp');
+          } else {
+            $('table #name').addClass('animated fadeInRight');
+            $('.button-top').addClass('animated fadeInDown');
+            $('.button-bottom').addClass('animated fadeInUp');
+          }
+
         }  else {
+          // Navbar
           $('li.name').addClass('animated fadeInDown');
           $('li.about').addClass('animated fadeInDown');
           $('li.projects').addClass('animated fadeInDown');
@@ -297,9 +328,13 @@ $(
 
   if ($('#homeCont').length) {
     $('#name h1').addClass('animated fadeIn');
-    $('#name').addClass('animated fadeInRight');
-    $('.button-top').addClass('animated fadeInDown');
-    $('.button-bottom').addClass('animated fadeInUp');
+    if ($(window).width() < 1024) {
+      $('.button-top, .button-bottom, #name').addClass('animated fadeInUp');
+    } else {
+      $('table #name').addClass('animated fadeInRight');
+      $('.button-top').addClass('animated fadeInDown');
+      $('.button-bottom').addClass('animated fadeInUp');
+    }
   } else {
     $('li.name').addClass('animated fadeInDown');
     $('li.about').addClass('animated fadeInDown');
