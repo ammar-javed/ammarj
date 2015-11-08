@@ -110,6 +110,12 @@ $ms-ratio: $golden;
   }
 }
 
+@media screen and (max-width: $media-tablet-max) { 
+  .company, .date {
+    margin: 10px 0 0 0;
+  }
+}
+
 .lg-backdrop.in {
     opacity: 0.80;
 }
