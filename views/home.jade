@@ -10,10 +10,24 @@ html
           link(rel='stylesheet', href='stylesheets/unsemantic-grid-responsive-tablet.css')
 
           .grid-container
-            .grid-100
+            .grid-100.tablet-grid-100.mobile-grid-100
               table#content-container
 
                 td
+
+                  // Name for mobile/tablet
+                  table.mobile-grid-100.tablet-grid-100.prefix-30.hide-on-desktop
+                    td
+                      .social
+                        a(href="https://twitter.com/ammarj965")#socbutton.twitter
+                          img(src="/img/twitter.png", alt="Follow me on Twitter!")#socbuttonimg
+                        a(href="https://www.facebook.com/ammar.javed.3998")#socbutton.facebook
+                          img(src="/img/facebook.png", alt="Message me on facebook to talk!")#socbuttonimg
+                        a(href="https://www.linkedin.com/in/ammarjav")#socbutton.linkedin
+                          img(src="/img/linkedin.png", alt="Connect with me on Linkedin!")#socbuttonimg
+                      #name
+                        h1 AMMAR JAVED
+
                   .grid-25.prefix-20
                     a(href='/about')#button.button-top.about ABOUT
                   .grid-25.prefix-25
@@ -22,7 +36,8 @@ html
                   // Breaking up row
                   span.clear
 
-                  table.prefix-30
+                  // Name for dekstop
+                  table.mobile-grid-100.tablet-grid-100.prefix-30.hide-on-tablet.hide-on-mobile
                     td
                       .social
                         a(href="https://twitter.com/ammarj965")#socbutton.twitter
