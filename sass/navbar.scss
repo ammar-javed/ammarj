@@ -123,13 +123,14 @@ $border-bottom-dur: 0.3;
         z-index: 9999;
         transition-duration: 0.2s;
         background: rgba(47, 48, 51, 0.8);
+        -webkit-animation-duration: 0.1s;
+        -webkit-animation-delay: 0s;
 
         /*Create a horizontal list with spacing*/
         li {
-            background: rgba(47, 48, 51, 0.8);
+            background: rgba(47, 48, 51, 0.9);
             float:left;
             clear:left;
-            margin-right: 1px;
             width: 100%;
         }
 
