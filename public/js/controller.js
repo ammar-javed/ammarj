@@ -25,6 +25,8 @@ $(document).ready(function() {
    $(document).scroll(function() { 
     if ( $(window).width() < 1024)  {
       $('.header').css('display', 'none');
+    } else {
+      $('.header').css('display', 'block');
     }
     scroll_start = $(this).scrollTop()+50; // Adding some offset to change color when the bottom of the navbar hits the elements, not the top.
     if(scroll_start > 100 && $(window).width() > 1024) {
