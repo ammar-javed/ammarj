@@ -71,6 +71,26 @@ $ms-ratio: $golden;
 
         }
     }
+
+    .techUsed {
+        float: none;
+        left: 15%;
+        ul {
+            margin: 20px 0 0 20px;
+            font-family: $roboto;
+            font-size: 10pt;
+            font-weight: 400;
+            color: $info;
+
+            li {
+                display:inline-block;
+                margin: 5px 5px 5px 5px;
+                padding: 5px 20px 5px 20px;
+                background: $tech-used-cont;
+                border-radius: 2px;
+            }
+        }
+    }
 }
 
 //Fancy Gradient Line
