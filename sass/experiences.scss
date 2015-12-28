@@ -108,29 +108,29 @@ $ms-ratio: $golden;
       box-shadow:0 0 8px black;
     }
   }
-  span {
-    $size:25px;
-    width:$size; height:$size; 
-    position:absolute; 
-    bottom:100%; margin-bottom:-$size/2;
-    left:50%; margin-left:-$size/2;
-    border-radius:100%;
-    box-shadow:0 2px 4px #999;
-    background:white;
-  }
-  span i {
-    $offset:4px;
-    position:absolute;
-    top:$offset; bottom:$offset;
-    left:$offset; right:$offset;
-    border-radius:100%;
-    border:1px dashed #aaa;
+  // span {
+  //   $size:25px;
+  //   width:$size; height:$size; 
+  //   position:absolute; 
+  //   bottom:100%; margin-bottom:-$size/2;
+  //   left:50%; margin-left:-$size/2;
+  //   border-radius:100%;
+  //   box-shadow:0 2px 4px #999;
+  //   background:white;
+  // }
+  // span i {
+  //   $offset:4px;
+  //   position:absolute;
+  //   top:$offset; bottom:$offset;
+  //   left:$offset; right:$offset;
+  //   border-radius:100%;
+  //   border:1px dashed #aaa;
     
-    text-align:center;
-    line-height:40px;
-    font-style:normal;
-    color:#999;
-  }
+  //   text-align:center;
+  //   line-height:40px;
+  //   font-style:normal;
+  //   color:#999;
+  // }
 }
 
 @media screen and (max-width: $media-tablet-max) { 
