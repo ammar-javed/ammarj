@@ -25,6 +25,7 @@ $(document).ready(function() {
    $(document).scroll(function() { 
     if ( $(window).width() < 1024)  {
       $('.header').css('display', 'none');
+      $('.header li').removeClass('mobile-trans');
     } else {
       $('.header').css('display', 'block');
     }
@@ -48,8 +49,10 @@ $(document).ready(function() {
     e.preventDefault();
     if ($('.header').css('display') === 'block') {
       $('.header').css('display', 'none');
+      $('.header li').removeClass('mobile-trans');
     } else {
       $('.header').css('display', 'block');
+      $('.header li').addClass('mobile-trans');
     }
   });
 });
